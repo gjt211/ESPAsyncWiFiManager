@@ -1,4 +1,5 @@
-Simple changes to allow better fit for mobile screen size, and implemented chnages from https://github.com/tzapu/WiFiManager/issues/296#issuecomment-291107656
+Simple changes to allow better fit for mobile screen size, and implemented changes from https://github.com/tzapu/WiFiManager/issues/296#issuecomment-291107656 for WiFi credentials.
+
 
 # AsyncWiFiManager
 ESP8266 Async WiFi Connection manager with fallback web configuration portal
