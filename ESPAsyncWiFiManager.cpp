@@ -430,8 +430,8 @@ void AsyncWiFiManager::safeLoop(){
 
 boolean  AsyncWiFiManager::startConfigPortal(char const *apName, char const *apPassword) {
   //setup AP
-  WiFi.mode(WIFI_AP_STA);
-  DEBUG_WM("SET AP STA");
+  WiFi.mode(WIFI_AP);
+  DEBUG_WM("SET AP");
 
   _apName = apName;
   _apPassword = apPassword;
@@ -466,6 +466,9 @@ boolean  AsyncWiFiManager::startConfigPortal(char const *apName, char const *apP
       connect = false;
       delay(2000);
       DEBUG_WM(F("Connecting to new AP"));
+	    
+      WiFi.mode(WIFI_STA);
+      DEBUG_WM("SET STA");
 
       // using user-provided  _ssid, _pass in place of system-stored ssid and pass
       if (connectWifi(_ssid, _pass) != WL_CONNECTED) {
